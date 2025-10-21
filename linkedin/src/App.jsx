@@ -1,35 +1,48 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
+  return( 
+  <div style={{backgroundColor:'tomato',height:'100vh',margin:0}}>
+    <div style={{display:'flex',justifyContent:'center',paddingTop:20}}>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div>
+            <PostComponent/>
+        </div>
+        <br></br>
+        <div>
+            <PostComponent/>
+        </div>
+
+  </div>
+  </div>
+  </div>
+  
+
+  )
+}
+function PostComponent(){
+  
+  let style={backgroundColor:"white",width:200,borderRadius:3,borderColor:"black",borderWidth:1,padding:20}
+  let img='https://media.licdn.com/dms/image/v2/D4D03AQG_AwK3WLVDAA/profile-displayphoto-shrink_100_100/B4DZaQ1Ja9H0AU-/0/1746186573711?e=1762387200&v=beta&t=Imkp5ke92xfyU_UxEFrky01cGcOo9zJghBJ0QyFprzo'
+  return(
+    <>
+    <div style={style}>
+<div style={{display:'flex'}}>
+    <img src={img} style={{width:30,height:30,borderRadius:50}}></img>
+    <div style={{fontSize:10,marginLeft:5}}>
+    <b>
+      murali
+    </b>
+    |<div>followers 2000</div>
+    <div>22m</div>
+    </div>
+   </div>
+ <div style={{fontSize:12,marginTop:2}}>do you know how win big?</div>
+ <div></div> <img src={img} style={{paddingTop:8}}></img></div> 
+
     </>
   )
 }
 
-export default App
+export default App;
